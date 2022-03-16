@@ -6,7 +6,7 @@
 /*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:22:44 by cjeon             #+#    #+#             */
-/*   Updated: 2022/03/16 17:33:34 by cjeon            ###   ########.fr       */
+/*   Updated: 2022/03/16 17:40:29 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,30 +50,24 @@ unsigned int ClapTrap::energy_point(void) const { return energy_point_; }
 
 unsigned int ClapTrap::attack_damege(void) const { return attack_damege_; }
 
-
 void ClapTrap::attack(const std::string &target) {
   if (energy_point_ == 0) {
-    std::cout << "ClapTrap <" << name_ 
-              << "> is so tired... nothing happened." 
+    std::cout << "ClapTrap <" << name_ << "> is so tired... nothing happened."
               << std::endl;
   } else {
-    std::cout << "ClapTrap <" << name_ 
-              << "> attack <" << target 
-              << "> causing " << attack_damege_ 
-              << "points of damage"  << std::endl;
+    std::cout << "ClapTrap <" << name_ << "> attack <" << target << "> causing "
+              << attack_damege_ << "points of damage" << std::endl;
     --energy_point_;
   }
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
   if (hit_point_ < amount) {
-    std::cout << "ClapTrap <" << name_ 
-              << "> resists!! so he takes only " << hit_point_
-              << "points of damage" << std::endl;
+    std::cout << "ClapTrap <" << name_ << "> resists!! so he takes only "
+              << hit_point_ << "points of damage" << std::endl;
     hit_point_ = 0;
   } else {
-    std::cout << "ClapTrap <" << name_ 
-              << "> takes " << amount
+    std::cout << "ClapTrap <" << name_ << "> takes " << amount
               << "points of damage.. it hurts!" << std::endl;
     hit_point_ -= amount;
   }
@@ -81,8 +75,8 @@ void ClapTrap::takeDamage(unsigned int amount) {
 
 void ClapTrap::beRepaired(unsigned int amount) {
   hit_point_ += amount;
-  std::cout << "ClapTrap <" << name_ 
-            << "> recovered " << amount << "points of damage.";
+  std::cout << "ClapTrap <" << name_ << "> recovered " << amount
+            << "points of damage.";
   if (hit_point_ > kHitPointOverCharge) {
     std::cout << " Overcharged!! feel so good!!!";
   }
