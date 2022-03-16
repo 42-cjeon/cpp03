@@ -6,7 +6,7 @@
 /*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:22:44 by cjeon             #+#    #+#             */
-/*   Updated: 2022/03/16 15:35:04 by cjeon            ###   ########.fr       */
+/*   Updated: 2022/03/16 17:33:34 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 #include <iostream>
 
 ClapTrap::ClapTrap(void)
-    : hit_point_(10), energy_point_(10), attack_damege_(0), name_("") {
+    : name_(""), hit_point_(10), energy_point_(10), attack_damege_(0) {
   std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string &name)
-    : hit_point_(10), energy_point_(10), attack_damege_(0), name_(name) {
+    : name_(name), hit_point_(10), energy_point_(10), attack_damege_(0) {
   std::cout << "ClapTrap constructor with name called" << std::endl;
 }
 
