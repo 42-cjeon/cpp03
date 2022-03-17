@@ -6,7 +6,7 @@
 /*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:22:44 by cjeon             #+#    #+#             */
-/*   Updated: 2022/03/17 12:20:38 by cjeon            ###   ########.fr       */
+/*   Updated: 2022/03/17 13:07:34 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 #include <iostream>
 
 ClapTrap::ClapTrap(void)
-    : name_(""), hit_point_(10), energy_point_(10), attack_damege_(0) {
+    : name_(""), hit_point_(10), energy_point_(10), attack_damage_(0) {
   std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string &name)
-    : name_(name), hit_point_(10), energy_point_(10), attack_damege_(0) {
+    : name_(name), hit_point_(10), energy_point_(10), attack_damage_(0) {
   std::cout << "ClapTrap constructor with name called" << std::endl;
 }
 
@@ -34,7 +34,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
   name_ = rhs.name();
   hit_point_ = rhs.hit_point();
   energy_point_ = rhs.energy_point();
-  attack_damege_ = rhs.attack_damege();
+  attack_damage_ = rhs.attack_damage();
   return *this;
 }
 
@@ -48,7 +48,7 @@ unsigned int ClapTrap::hit_point(void) const { return hit_point_; }
 
 unsigned int ClapTrap::energy_point(void) const { return energy_point_; }
 
-unsigned int ClapTrap::attack_damege(void) const { return attack_damege_; }
+unsigned int ClapTrap::attack_damage(void) const { return attack_damage_; }
 
 void ClapTrap::set_name(const std::string &name) { name_ = name; }
 
@@ -58,8 +58,8 @@ void ClapTrap::set_energy_point(unsigned int energy_point) {
   energy_point_ = energy_point;
 }
 
-void ClapTrap::set_attack_damege(unsigned int attack_damege) {
-  attack_damege_ = attack_damege;
+void ClapTrap::set_attack_damage(unsigned int attack_damage) {
+  attack_damage_ = attack_damage;
 }
 
 void ClapTrap::attack(const std::string &target) {
@@ -68,7 +68,7 @@ void ClapTrap::attack(const std::string &target) {
               << std::endl;
   } else {
     std::cout << "ClapTrap <" << name_ << "> attack <" << target << "> causing "
-              << attack_damege_ << "points of damage" << std::endl;
+              << attack_damage_ << "points of damage" << std::endl;
     --energy_point_;
   }
 }
