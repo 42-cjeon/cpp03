@@ -6,7 +6,7 @@
 /*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:24:30 by cjeon             #+#    #+#             */
-/*   Updated: 2022/03/17 12:05:20 by cjeon            ###   ########.fr       */
+/*   Updated: 2022/03/17 12:19:41 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ class ClapTrap {
   unsigned int hit_point(void) const;
   unsigned int energy_point(void) const;
   unsigned int attack_damege(void) const;
+
+  void set_name(const std::string &name);
+  void set_hit_point(unsigned int hit_point);
+  void set_energy_point(unsigned int energy_point);
+  void set_attack_damege(unsigned int attack_damege);
 
   void attack(const std::string &target);
   void takeDamage(unsigned int amount);

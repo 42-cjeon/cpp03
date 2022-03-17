@@ -6,7 +6,7 @@
 /*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:22:44 by cjeon             #+#    #+#             */
-/*   Updated: 2022/03/17 12:05:09 by cjeon            ###   ########.fr       */
+/*   Updated: 2022/03/17 12:20:38 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,18 @@ unsigned int ClapTrap::hit_point(void) const { return hit_point_; }
 unsigned int ClapTrap::energy_point(void) const { return energy_point_; }
 
 unsigned int ClapTrap::attack_damege(void) const { return attack_damege_; }
+
+void ClapTrap::set_name(const std::string &name) { name_ = name; }
+
+void ClapTrap::set_hit_point(unsigned int hit_point) { hit_point_ = hit_point; }
+
+void ClapTrap::set_energy_point(unsigned int energy_point) {
+  energy_point_ = energy_point;
+}
+
+void ClapTrap::set_attack_damege(unsigned int attack_damege) {
+  attack_damege_ = attack_damege;
+}
 
 void ClapTrap::attack(const std::string &target) {
   if (energy_point_ == 0) {
