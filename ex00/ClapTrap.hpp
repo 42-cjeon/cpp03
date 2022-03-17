@@ -6,7 +6,7 @@
 /*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:24:30 by cjeon             #+#    #+#             */
-/*   Updated: 2022/03/16 17:41:01 by cjeon            ###   ########.fr       */
+/*   Updated: 2022/03/17 12:05:20 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class ClapTrap {
  private:
   static const unsigned int kHitPointOverCharge = 10;
 
-  const std::string name_;
+  std::string name_;
   unsigned int hit_point_;
   unsigned int energy_point_;
   unsigned int attack_damege_;

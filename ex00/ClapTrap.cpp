@@ -6,7 +6,7 @@
 /*   By: cjeon <cjeon@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:22:44 by cjeon             #+#    #+#             */
-/*   Updated: 2022/03/16 17:40:29 by cjeon            ###   ########.fr       */
+/*   Updated: 2022/03/17 12:05:09 by cjeon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ ClapTrap::ClapTrap(const ClapTrap &origin) {
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &rhs) {
   std::cout << "ClapTrap assignment operator called" << std::endl;
-  const_cast<std::string &>(name_) = rhs.name();
+  name_ = rhs.name();
   hit_point_ = rhs.hit_point();
   energy_point_ = rhs.energy_point();
   attack_damege_ = rhs.attack_damege();
